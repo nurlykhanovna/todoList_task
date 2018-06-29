@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rtc-Aa-7KH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New todo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myTodoLists" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOE-8g-uMC">
+                                <rect key="frame" x="16" y="110" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeBTNunstate.png"/>
+                                <state key="selected" image="homeBTN.png"/>
+                                <connections>
+                                    <action selector="homeCategoryBTNpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqr-lJ-0C4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNa-Hq-LfI">
+                                <rect key="frame" x="212" y="110" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cartBTNunstate.png"/>
+                                <state key="selected" image="cartBTNstate.png"/>
+                                <connections>
+                                    <action selector="shopcartBTNpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fd-Bz-xLJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPF-ir-CBd">
+                                <rect key="frame" x="309" y="110" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="planeBTNunstate.png"/>
+                                <state key="selected" image="planeBTNstate.png"/>
+                                <connections>
+                                    <action selector="planeBTNpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dId-lD-BJ8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Todo title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjO-j7-cbx">
+                                <rect key="frame" x="16" y="217" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEx-7j-Btk">
+                                <rect key="frame" x="107" y="213" width="235" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tYG-IW-hgC">
+                                <rect key="frame" x="0.0" y="284" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="519039961.39185703">
+                                    <!--2017-06-13 09:46:01 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dataPickerVIew:" destination="BYZ-38-t0r" eventType="valueChanged" id="gA6-eT-9kY"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yba-CO-zo8">
+                                <rect key="frame" x="152" y="553" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneBTNpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BB3-Lt-gl3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFr-OG-0Z6">
+                                <rect key="frame" x="112" y="110" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="callBTNunstate.png"/>
+                                <state key="selected" image="callBTNstate.png"/>
+                                <connections>
+                                    <action selector="callCategoryBTNpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X0P-M8-Zyk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New todo" id="yc3-dr-4YE">
+                        <barButtonItem key="leftBarButtonItem" title="My todo lists" id="Utx-mn-hsW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callCategoryBTN" destination="sFr-OG-0Z6" id="aYX-4t-uaO"/>
+                        <outlet property="dataPickerView" destination="tYG-IW-hgC" id="MDB-xV-V5T"/>
+                        <outlet property="doneButton" destination="Yba-CO-zo8" id="44w-Xr-6GV"/>
+                        <outlet property="homeCategoryBTN" destination="kOE-8g-uMC" id="bqu-qR-utR"/>
+                        <outlet property="planeCategoryBTN" destination="PPF-ir-CBd" id="FIe-vo-hUd"/>
+                        <outlet property="shopcartCategoryBTN" destination="FNa-Hq-LfI" id="L8u-7A-wpP"/>
+                        <outlet property="titleTextField" destination="aEx-7j-Btk" id="JDN-yd-oyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="-595"/>
+        </scene>
+        <!--My todo-->
+        <scene sceneID="0Rw-HX-J9h">
+            <objects>
+                <tableViewController id="1CC-ot-Sw4" customClass="MyTodo" customModule="myTodoLists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="y3p-TO-F0J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="68" id="AZJ-O3-COe" customClass="NotesTableViewCell" customModule="myTodoLists" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AZJ-O3-COe" id="c15-Qi-K6e">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xru-vi-4rF">
+                                            <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCI-dY-hGg">
+                                            <rect key="frame" x="72" y="8" width="272" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyO-15-WNT">
+                                            <rect key="frame" x="72" y="34" width="272" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="myImageView" destination="Xru-vi-4rF" id="3rx-MZ-toA"/>
+                                    <outlet property="myLabel" destination="iCI-dY-hGg" id="m10-rH-f2A"/>
+                                    <outlet property="mySubLabel" destination="JyO-15-WNT" id="Zgx-WF-meH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1CC-ot-Sw4" id="HHU-Tu-7xu"/>
+                            <outlet property="delegate" destination="1CC-ot-Sw4" id="U4v-YP-Ne6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My todo" id="93T-Qd-q2C">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="TQT-hZ-Dyn">
+                            <connections>
+                                <action selector="editAction:" destination="1CC-ot-Sw4" id="8Wk-uy-KPq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fxt-2d-2gA">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="segueToSecondVC" id="aeK-d2-YIc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jx-Mu-n3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="-595"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wxy-DL-eGe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rtc-Aa-7KH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MhC-1e-fzg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1CC-ot-Sw4" kind="relationship" relationship="rootViewController" id="Q25-jb-KhN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSW-lC-INy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="-595"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="callBTNstate.png" width="50" height="50"/>
+        <image name="callBTNunstate.png" width="50" height="50"/>
+        <image name="cartBTNstate.png" width="50" height="50"/>
+        <image name="cartBTNunstate.png" width="50" height="50"/>
+        <image name="homeBTN.png" width="50" height="50"/>
+        <image name="homeBTNunstate.png" width="50" height="50"/>
+        <image name="planeBTNstate.png" width="50" height="50"/>
+        <image name="planeBTNunstate.png" width="50" height="50"/>
+    </resources>
+</document>
